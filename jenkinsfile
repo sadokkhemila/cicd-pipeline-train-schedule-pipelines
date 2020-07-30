@@ -3,8 +3,8 @@ pipeline{
    stages{
      stage('build'){
        steps{ 
-              echo 'running build automation'
-              sh './gradlew build -no --daemoun'
+              echo 'Running build automation'
+              sh './gradlew build --no-daemon'
               archivesArtifacts artifacts: 'dist/trainshedule2.zip'
               }
         }
